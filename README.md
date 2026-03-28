@@ -177,17 +177,21 @@ c. Generar una lista de pares (x, y) donde x < y y ambos estén en [1..5].
 
 ## Ejercicio 4 - Funciones que reciben y retornan funciones
 
-1. Define una funcion que recibe una función que transforma una lectura (por ejemplo, conversión de grados Celsius a Fahrenheit, o aplicar calibración),
-y una lista de lecturas de sensores.
+1. Define una funcion que recibe una función que transforma un dato (por ejemplo, conversión de grados Celsius a Fahrenheit),
+y lo aplica a una lista de datos.
 
    ```
    procesarLecturas :: (Double -> Double) -> [Double] -> [Double]
-   procesarLecturas f lecturas = map f lecturas
+   #Implementa procesarLecturas
+
+   Ejemplo:
+   procesarLecturas celsiusAFaranheit [0,12,20]
    ```
 
 2. Define una función que retorne un filtro personalizado:
     ```
    crearFiltro :: (a -> Bool) -> ([a] -> [a])
+   #Implementa crearFiltro
 
    Ejemplo:
    
@@ -198,7 +202,7 @@ y una lista de lecturas de sensores.
 3. Crea una función que genera “verificadores” de rangos.
     ```
     enRango :: Int -> Int -> (Int -> Bool)
-    enRango min max = (\x -> x >= min && x <= max)
+    #Implementa enRango
 
     Ejemplo:
     
@@ -210,7 +214,12 @@ y una lista de lecturas de sensores.
 
    ```
    potenciador :: Int -> (Int -> Int)
-   potenciador n = (\x -> x ^ n)
+   #Implementa potenciador
+
+   Ejemplo:
+
+   potencia5 = potenciador 5
+   potencia5 7
    ```
 
 
@@ -239,7 +248,7 @@ Tienes:
 
 Estado inicial: (0, 0)
 
-Meta: cualquier estado donde una jarra tenga 4 litros, es decir: (4, _ ) o ( _ ,4)
+Meta: Estado donde la primera jarra tenga 4 litros, es decir: (4, 0 )
 
 **Representación de estados**
 
@@ -272,12 +281,15 @@ vecinos (a,b) =
   , (transferirAB (a,b), 1)  -- Verter A→B
   , (transferirBA (a,b), 1)  -- Verter B→A
   ]
+```
 
+Definir funciones de transicion de estados
+```
 -- Verter de A a B
-Definir transferirAB :: Estado -> Estado
+-- Definir transferirAB :: Estado -> Estado
 
 -- Verter de B a A
-transferirBA :: Estado -> Estado
+-- Definir transferirBA :: Estado -> Estado
 ```
 
 Definir una heurística admisible
