@@ -1,0 +1,6 @@
+Entre 10 y 14 horas.
+Considero que el laboratorio está completo y funcional, aunque algunas partes podrían optimizarse.
+El mayor logro fue comprender y aplicar las funciones de orden superior, ya que implicó aprender a construir funciones que trabajan con otras funciones, y no solo con datos.
+El mayor problema técnico fue el último ejercicio. Para resolverlo, necesité la ayuda de un compañero que me explicó el código paso a paso, lo que me permitió entenderlo y completar la parte faltante.
+Tenía entendido que el trabajo era individual.
+Principalmente utilicé como referencia: https://learnyouahaskell.github.io/chapters.html, ya que explica muy bien los conceptos y ofrece buenos ejemplos.
